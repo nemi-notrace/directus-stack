@@ -1,6 +1,8 @@
 {
   "private": true,
   "sideEffects": false,
+  "name": "remix",
+  "version": "0.1.0",
   "scripts": {
     
     "build": "run-s build:remix build:css",
