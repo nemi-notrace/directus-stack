@@ -8,6 +8,9 @@
   },
   "type": "module",
   "scripts": {
+  "postinstall": "run-p post:*",
+  "post:directus": "cd packages/directus && yarn",
+  "post:remix": "cd packages/remix && yarn",
   "dev":"run-p dev:*",  
   "dev:directus": "cd packages/directus && yarn directus start",
   "dev:remix": "cd packages/remix && yarn dev",
