@@ -7,4 +7,5 @@ docs
 SANDBOX
 data
 yarn.lock
+.cache
 *.0x
