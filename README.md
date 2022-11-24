@@ -9,3 +9,9 @@ yarn dev
 Be carfull if you work with  existing database ... better migrate !!!
 https://docs.directus.io/reference/cli.html
 
+
+## TO DO
+
+- clean up tailwind
+- check conf
+- add auth
