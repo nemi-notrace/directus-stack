@@ -1,0 +1,37 @@
+{
+  "extends": ["@remix-run/eslint-config", "@remix-run/eslint-config/node", "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier"],
+   "root": true,
+  // parse TypeScript files
+  // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser
+ "parser": "@typescript-eslint/parser",
+  // configure eslint using options described at
+  // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin
+ "plugins": ["@typescript-eslint"],
+  
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2022": true
+  },
+  "rules": {
+    "no-var": "warn",
+    "prettier/prettier": "warn",
+    "no-constant-condition": ["warn", { "checkLoops": false }],
+    "no-empty": ["warn"],
+    "@typescript-eslint/comma-dangle": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-unused-vars": ["warn", {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_"
+    }]
+  }
+}

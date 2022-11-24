@@ -1,0 +1,12 @@
+*/**.js
+*/**.d.ts
+*/**.json
+node_modules
+data
+dist
+build
+docs
+node_modules
+directus
+public
+**/SANDBOX/**
