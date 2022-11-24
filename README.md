@@ -15,3 +15,4 @@ https://docs.directus.io/reference/cli.html
 - clean up tailwind
 - check conf
 - add auth
+- check gitignore ... keep some stuff alive...
