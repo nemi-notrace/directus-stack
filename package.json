@@ -1,8 +1,8 @@
 {
   "private": true,
   "sideEffects": false,
-  "workspaces": ["directus/*"],
   "scripts": {
+    "postinstall": "cd directus && yarn",
     "build": "run-s build:remix build:css",
     "build:remix": "remix build",
         "build:css": "tailwindcss -m -i ./styles/app.css -o app/styles/app.css",
