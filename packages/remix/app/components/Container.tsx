@@ -8,7 +8,8 @@ interface ContainerProps {
 export default function Container({ children }: ContainerProps) {
   return (
     <main id="skip" className="flex flex-col justify-center px-2 py-2">
-      <Header /> {children}
+      <Header />
+      {children}
       <Footer />
     </main>
   )

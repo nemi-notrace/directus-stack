@@ -11,7 +11,10 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "cross-var": "1.1.0",
     "directus": "^9.21.0",
+    "dotenv-cli": "3.0.0",
+    "env-path": "^1.0.7",
     "pg": "^8.8.0"
   }
 }

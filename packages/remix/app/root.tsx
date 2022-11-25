@@ -9,6 +9,7 @@ import {
   useLoaderData,
 } from '@remix-run/react'
 import tailwindStyles from './styles/app.css'
+import { isAuthenticated } from './auth.server'
 import {
   Theme,
   ThemeBody,
@@ -34,6 +35,8 @@ export const meta: MetaFunction = () => ({
 })
 
 export type LoaderData = {
+  user: false | { user: any; token: any }
+
   theme: Theme | null
 }
 
@@ -41,6 +44,8 @@ export const loader = async ({ request }: LoaderArgs) => {
   const themeSession = await getThemeSession(request)
 
   const data: LoaderData = {
+    user: await isAuthenticated(request),
+
     theme: themeSession.getTheme(),
   }
 

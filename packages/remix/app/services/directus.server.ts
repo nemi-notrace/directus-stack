@@ -1,14 +1,14 @@
+import dotenv from 'dotenv'
 import { Directus } from '@directus/sdk'
-import { envSchema } from '~/env.server'
 
-let env = envSchema.parse(process.env)
+dotenv.config()
 
-const directus = new Directus(env.DIRECTUS_URL)
+const directus = new Directus(process.env.DIRECTUS_URL || '')
 
 export async function getDirectusClient() {
   //if (directus.auth.token) return directus;
-  if (env.DIRECTUS_STATIC_TOKEN) {
-    await directus.auth.static(env.DIRECTUS_STATIC_TOKEN)
+  if (process.env.DIRECTUS_STATIC_TOKEN) {
+    await directus.auth.static(process.env.DIRECTUS_STATIC_TOKEN)
   }
   return directus
 }
@@ -22,5 +22,5 @@ export function getAssetURL(image: any) {
   }
   if (!id) return null
 
-  return `${env.DIRECTUS_URL}/assets/${id}`
+  return `${process.env.DIRECTUS_URL || ''}/assets/${id}`
 }

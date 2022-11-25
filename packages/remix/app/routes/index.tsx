@@ -6,7 +6,7 @@ export default function Index() {
 
   return (
     <Container>
-      <div>
+      <div className="bg-red-600 dark:bg-lime-400">
         <h1>Welcome to Remix</h1>
         <ul>
           <li>
